@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type = "text/css">
+	h1	{
+				font-family : aqua grotesque; 
+				font-size : 60px; }
+	a	{
+				color :black;
+				text-decoration: none}
+	body, html	{
+				background: #f1f1f1;;
+				height: 100%;
+				padding: 20px;}
+	th			{padding : 20px;
+				font-family : moon;
+				line-height: 1px}
+	.card {
+				background-color: white;
+				padding: 20px;
+				margin-top: 20px; }
+	.row::after {
+				content: "";
+				display: table;
+				clear: both; }
+	p		{font-family: Kano regular}
+	.footer {
+			padding: 5px;
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-family: Kano regular;
+			color: grey}
+	#container {
+			margin: 0px auto;
+			width: 500px;
+			height: 375px;
+			border: 10px #333 solid;
+			margin-top: 20px;
+				}
+	#videoElement {
+			width: 500px;
+			height: 375px;
+			background-color: #666;
+				}
+	</style>
+		<title>Foxtrot Repair Shop</title>
+	</head>
+	<body>
+    <div class="card">
+		<center><h1>FOXTROT REPAIR SHOP</center></h1>
+		<center><table>
+			<th><a href="index.html">HOME</th></a>
+			<th>SMARTPHONE</th>
+			<th>TABLET</th>
+			<th>FIND US</th>
+			<th><a href="contact_us.html">CONTACT US</th></a>
+		</center></table>
+		</div>
+		<div id="container">
+    <video autoplay="true" id="videoElement" src="blob:https://www.kirupa.com/2774ad41-09ac-4f7b-98df-94110cc80822">
+	</video>
+		</div>
+		<script = "text\javascript">
+		
+var video = document.querySelector("#videoElement");
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+if (navigator.getUserMedia) {       
+	navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+
+function handleVideo(stream) {
+	video.src = window.URL.createObjectURL(stream);
+}
+
+function videoError() {
+	// do something
+}
+				
+			</script>
+		<div class="footer">Copyright © 2017 Foxtrot Inc. All Right Reserved</div>
+</body>
+</html>	
