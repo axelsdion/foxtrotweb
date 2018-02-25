@@ -6,6 +6,9 @@
 	h1	{
 				font-family : aqua grotesque; 
 				font-size : 60px; }
+	h3	{		font-family : moon; 
+				font-size : 20px;
+				}
 	a	{
 				color :black;
 				text-decoration: none}
@@ -32,6 +35,11 @@
 			margin-bottom: 20px;
 			font-family: Kano regular;
 			color: grey}
+	#map 	{
+			height: 400px;
+			width: 75%;
+			margin-top: 20px;
+			}
 	</style>
 		<title>Foxtrot Repair Shop</title>
 	</head>
@@ -47,30 +55,27 @@
 			<th><a href="contact_us.html">CONTACT US</th></a>
 		</center></table>
 		</div>
-	 <div class="card">
-		<img src="img1.png"/>
-		<span style="float:right; width: 49%">
-		<p style="float:right; display:block; font-size:20px; text-align: center; margin-top: 60px; margin-bottom: 60px">
-		For being the trusted global store 
-		in the world, we provide all solution for your broken devices.
-		Any iPhone, Android even Windows Phone we can solve all your problems.</p>
-		<center>
-		<img src="iPhone_logo.png" width="20%" height="20%"/>
-		<img src="android.png" width="15%" height="15%" style="margin-left:20px"/>
-		<br>
-		<img src="winphone.png" width="40%" height="40%" style="margin-top:40px"/></center>
-		</span>
-	</div>
-	
-	<div class="card">
-		<img src="cs.jpg" width="50%" height="50%" />
-		<span style="float:right; width: 49%">
-		<p style="float:right; display:block; font-size:20px; text-align: center; margin-top: 60px; margin-bottom: 60px">
-		We have all your need. Introducing Video Call directly to our Customer Services. In this way you dont need to call or come to our store.
-		All you need is just press a single button and Voila! you are connected to us.</p>
-		</span>
-	</div>
-</div>
+			<span style="float: right;">
+	<div style="font-family: moon; font-size: 80px; margin-top: 120px">OUR</div>
+	<div style="font-family: moon; font-size: 80px;">OFFICE</div>
+	</span>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -6.3163026, lng: 107.0114882};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTpqdYDpQW27GX_7ZsyPsdNKrd4B4J1S0&callback=initMap">
+    </script>
 	<div class="footer">Copyright © 2017 Foxtrot Inc. All Right Reserved</div>
-</body>
-</html>	
+  </body>
+</html>
